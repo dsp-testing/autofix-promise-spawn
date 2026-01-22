@@ -77,3 +77,6 @@ Options are identical to `promiseSpawn` except for the following:
 
 - `command` String, the command to use to open the file in question. Default is
    one of `start`, `open` or `xdg-open` depending on platform in use.
+
+
+
