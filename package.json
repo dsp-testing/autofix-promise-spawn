@@ -46,6 +46,7 @@
     "publish": true
   },
   "dependencies": {
+    "shell-quote": "^1.8.3",
     "which": "^5.0.0"
   }
 }

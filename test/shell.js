@@ -41,6 +41,21 @@ t.test('sh', (t) => {
     t.ok(proc.called)
   })
 
+  t.test('runs with no arguments', async (t) => {
+    const proc = spawk.spawn('sh', ['-c', 'echo'], { shell: false })
+      .stdout(Buffer.from('\n'))
+
+    const result = await promiseSpawn('echo', [], { shell: 'sh' })
+    t.hasStrict(result, {
+      code: 0,
+      signal: undefined,
+      stdout: '',
+      stderr: '',
+    })
+
+    t.ok(proc.called)
+  })
+
   t.end()
 })
 
